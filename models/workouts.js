@@ -1,7 +1,8 @@
 //----------------imports---------------------
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 //----------------schema-------------------------
+
 const workoutSchema = new mongoose.Schema({
     name: { type: String, required: true },
     reps: { type: Number, required: true },
@@ -11,7 +12,6 @@ const workoutSchema = new mongoose.Schema({
 //-----------------model-------------------------
 
 module.exports = mongoose.model('Workout', workoutSchema);
-
 
 //-----------------exports------------------------
 

@@ -10,7 +10,7 @@ app.use(express.json());
 dotenv.config();
 
 const Macros  = require("./models/macros.js");
-const Workout = require("./models/workout.js")
+const Workout = require("./models/workouts.js")
 
 mongoose.connect(process.env.MONGODB_URI)
 
@@ -39,7 +39,11 @@ app.get('/macros', async (req, res) => {
 
 // Update: Edit a consumed item
 app.put('/macros/:id', async (req, res) => {
-  const updatedEntry = await Macros.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  const updatedEntry = await Macros.findByIdAndUpdate(
+    req.params.id, 
+    req.body, 
+    { new: true }
+  );
   res.json(updatedEntry);
 });
 
