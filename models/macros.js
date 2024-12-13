@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 //----------------schema-------------------------
 const macrosSchema = new mongoose.Schema({
     food: { type: String },
-    calories: { type: Numbe },
+    calories: { type: Number },
     protein: { type: Number },
     carbs: { type: Number },
     fat: { type: Number },
