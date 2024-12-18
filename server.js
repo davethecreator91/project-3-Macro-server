@@ -10,7 +10,6 @@ app.use(express.json());
 dotenv.config();
 
 const Macros  = require("./models/macros.js");
-const Workout = require("./models/workouts.js")
 
 mongoose.connect(process.env.MONGODB_URI)
 
